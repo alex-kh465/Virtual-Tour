@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christ University VR Experience</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+            color: #003366;
+            overflow: hidden;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('20250301_132800_720.jpg') no-repeat center center;
+            background-size: cover;
+            filter: blur(5px);
+            animation: moveBackground 20s infinite linear alternate;
+            z-index: -1;
+        }
+        @keyframes moveBackground {
+            0% { transform: scale(1.1) translateY(-10px); }
+            100% { transform: scale(1.1) translateY(10px); }
+        }
+        .container {
+            position: relative;
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 1000px;
+            margin: 50px auto;
+            border: 4px solid #003366;
+            animation: fadeIn 1.5s ease-in-out;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite alternate;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+        .content {
+            flex: 2;
+            text-align: center;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .vr-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #003366;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+            animation: bounce 2s infinite;
+        }
+        .vr-link:hover {
+            background: #0055aa;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .team {
+            margin-top: 30px;
+            font-size: 18px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .photos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+        .profile {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #003366;
+            object-fit: cover;
+        }
+        .profile p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <!-- Left-side developer profiles -->
+        <div class="photos">
+            <div class="profile">
+                <img src="alex.jpg" alt="Alex KH">
+                <p><strong>Alex KH</strong></p>
+                <p>Reg: 2448507</p>
+            </div>
+            <div class="profile">
+                <img src="varun.jpg" alt="Varun C Araballi">
+                <p><strong>Varun C Araballi</strong></p>
+                <p>Reg: 2448555</p>
+            </div>
+            <div class="profile">
+                <img src="vyshnavi_1.jpg" alt="Vyshnavi Kathrine">
+                <p><strong>Vyshnavi Kathrine</strong></p>
+                <p>Reg: 2448558</p>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="content">
+            <img src="logo-removebg-preview.png" alt="Christ University Logo" class="logo">
+            <div class="title">CHRIST UNIVERSITY (CENTRAL CAMPUS) VR EXPERIENCE</div>
+            <a href="https://app.seekbeak.com/v/YbjNDVVm1A7" class="vr-link">Enter Virtual Tour</a>
+            <div class="team">
+                <p>Designed & Programmed by:</p>
+                <p><strong>MSc AIML: </strong>Alex KH, Varun C Araballi, Vyshnavi Kathrine</p>
+                <p><strong>BCA:</strong> Vishal, Sambhav, Sriniketh, Isar</p>
+                <p>Guided by Dr. Suresh K</p>
+                <p>Directed by Dr. Ashok Immanuel V</p>
+                <br>
+                <p><strong>A Project by the Department of Computer Science, Central Campus</strong></p>
+            </div>
+        </div>
+
+        <!-- Right-side developer profiles -->
+        <div class="photos">
+            <div class="profile">
+                <img src="vishal.jpg" alt="Vishal">
+                <p><strong>Vishal</strong></p>
+                <p>Reg: 2341669</p>
+            </div>
+            <div class="profile">
+                <img src="sambhav.jpg" alt="Sambhav">
+                <p><strong>Sambhav</strong></p>
+                <p>Reg: 2341658</p>
+            </div>
+            <div class="profile">
+                <img src="sriniketh.jpg" alt="Sriniketh">
+                <p><strong>Sriniketh</strong></p>
+                <p>Reg: 2341660</p>
+            </div>
+            <div class="profile">
+                <img src="isar.jpeg" alt="Isar">
+                <p><strong>ISAR KAUR</strong></p>
+                <p>Reg: 2341631</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
